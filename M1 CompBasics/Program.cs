@@ -8,13 +8,14 @@ namespace M1_CompBasics
         {
 			// Let's declare and assign some variables. Start by declaring and assigning a variable of type string. 
 			// Here's our format: <type> <variableName> = "<put a word in here>";
+			string favoriteCoffee = "Black";
 
 
 
 			// Let's use our built-in Console.WriteLine() method to print that to the console. What should we pass 
 			// into the parameters of the method to print the string value stored in our variable?
 
-
+			Console.WriteLine(favoriteCoffee);
 
 			// Now hit "run" and see what happens! 
 
@@ -22,39 +23,38 @@ namespace M1_CompBasics
 			// Here's our format: <type> <variableName> = <put a number or numbers in here>;
 			// Notice we only use quotation marks for strings. 
 
-
+			int score = 1;
 
 			// Let's use our built-in Console.WriteLine() method to print that to the console. What should we pass 
 			// into the parameters of the method to print the int value stored in our variable?
 
-
+			Console.WriteLine(score);
 
 			// Let's ask the user a question, store their answer in a variable, and then print that. So put a question into our method parameters: 
 
-
+			Console.WriteLine("What do you like to drink?");
 
 			// Do you remember how we can take user input? Through the Console.ReadLine() method. The program pauses after the ReadLine method and waits for the "enter" 
 			// button to be clicked. It takes in whatever letters or numbers the user types before pushing "enter". 
 
 			// Let's make the Console.ReadLine save the user's input. 
 			// First, let's declare a variable to store the user's input. Our format is: <type> <variableName>;
-
+			string whatTheUserDrinks;
 
 
 			// Next we'll use the = operator to assign the Console.ReadLine() user input to our variable. Because we already declared the variable, we don't need to
 			// refer to the type again. So our code will look like this: 
 			// <variableName> = Console.ReadLine();
-
-
+			whatTheUserDrinks = Console.ReadLine();
 
 			// Let's use our Console.WriteLine() method and print the value stored in your variable to the console. We do that by passing your variable name into  
 			// the parameters of the Console.WriteLine() method, like we did in the examples above. So your code will look like: Console.WriteLine(<yourVariableName>);
-
+			Console.WriteLine(whatTheUserDrinks);
 
 
 			// Let's go one step further and insert the variable in a sentence. Use this format: Console.WriteLine("Nice to meet you, " + <yourVariableName> + "!"); 
 			// Then run it! 
-
+			Console.WriteLine("Nice to meet you," + whatTheUserDrinks +"!");
 
 
 			// Console.ReadLine() has a quirk - it returns strings only! What does that mean? It means a number that is stored as a string has no 
@@ -62,7 +62,7 @@ namespace M1_CompBasics
 			// format to integer format. We can use a built-in method called Convert.ToInt32() for that. 
 
 			// Let's ask for a number using Console.WriteLine("<ask the user for a number>");
-
+			Console.WriteLine("How many cups of coffee do you have per day?");
 
 
 			// Let's take in the user's answer via our Console.ReadLine() method, and also convert it from a string to an integer. So we'll do three things in 
@@ -71,15 +71,18 @@ namespace M1_CompBasics
 			// Our format is: <type> <variableName> = Convert.ToInt32(Console.ReadLine());
 
 
+			int cupsCoffee = Convert.ToInt32(Console.ReadLine());
 
 			// Now let's see if it really is a number and not a string. Let's write a simple line of addition. Use this format:
 			// <type> <newVariable> = <variableName> + <variableName>
 			// Run it! 
+			int totalCups = cupsCoffee + cupsCoffee;
 
 
 
 			// Nothing happened! Because we need to print out the variable that's storing the sum of our addition. 
 			// Use Console.WriteLine() and pass in your variable name that's holding the sum into the parameters to print it to the console. 
+			Console.WriteLine($"Great! You love your coffee");
 
 
 		}
